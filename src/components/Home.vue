@@ -53,7 +53,6 @@
 </template>
 
 <script>
-const BASE_URL = "http://localhost:8000/"
 export default {
 
     data:() => {
@@ -71,7 +70,7 @@ export default {
         upload_image(){
             let formData = new FormData();
             formData.append("image", this.image);
-            this.axios.post(BASE_URL + "api/upload/image", formData, {headers:{"Content-Type":"multipart/form-data"}})
+            this.axios.post("/api/upload/image", formData, {headers:{"Content-Type":"multipart/form-data"}})
             .then(image => {
                 this.image_code = image.data.url_code
                 this.is_copy_clipboard = false;
@@ -91,7 +90,7 @@ export default {
     computed:{
 
         get_image_url(){
-            return BASE_URL + "i/" + this.image_code
+            return "/i/" + this.image_code
         }
     }
 }
