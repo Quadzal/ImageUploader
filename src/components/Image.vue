@@ -5,7 +5,6 @@
 </template>
 
 <script>
-const BASE_URL = "http://localhost:8000/api/"
 export default {
     name:"ImageComponent",
     data:() =>{
@@ -15,7 +14,7 @@ export default {
     },
 
     created(){
-        this.axios.get(BASE_URL + "image/" + this.$route.params.image_code)
+        this.axios.get("/api/image/" + this.$route.params.image_code)
         .then(res => this.image = res.data);
     }
 }
