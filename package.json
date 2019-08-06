@@ -16,6 +16,7 @@
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.27",
+    "express": "*",
     "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",
     "express-fileupload": "^1.1.5",
