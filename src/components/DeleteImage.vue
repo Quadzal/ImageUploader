@@ -10,7 +10,6 @@
 </template>
 
 <script>
-const BASE_URL = "http://localhost:8000/"
 export default {
     name:"DeleteImageComponent",
     data:() => {
@@ -20,7 +19,7 @@ export default {
         }
     },
     created(){
-        this.axios.get(BASE_URL + "api/delete/" + this.$route.params.image_code)
+        this.axios.get("/api/delete/" + this.$route.params.image_code)
         .then((response) => {
             this.is_success=true
         }).catch((err) => {
