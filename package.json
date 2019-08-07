@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.21",
@@ -16,10 +17,12 @@
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.27",
-    "express": "*",
+    "compression": "^1.7.4",
     "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",
+    "express": "^4.17.1",
     "express-fileupload": "^1.1.5",
+    "gzip": "^0.1.0",
     "horizon-youtube-mp3": "^1.9.2",
     "mongoose": "^5.6.8",
     "save": "^2.4.0",

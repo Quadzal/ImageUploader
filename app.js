@@ -7,6 +7,10 @@ const mongoose = require("mongoose");
 const ImageModel = require("./ImageModel");
 const history = require("connect-history-api-fallback");
 const fs = require("fs");
+const gzip = require("compression");
+
+app.use(gzip());
+
 app.use(history({
     rewrites:[
         {from:"\/i/", to:"/"},
@@ -35,7 +39,7 @@ app.post("/api/upload/image", async (req, res) => {
             await image.mv(image_src);
             
             let new_image = new ImageModel({
-                src:"/uploads/" + image_url_code,
+                src:"/uploads/"+ image_url_code,
                 url_code:image_url_code
             })
             
