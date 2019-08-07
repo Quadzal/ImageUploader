@@ -55,6 +55,6 @@ app.get("/api/delete/:image_code", async (req, res) => {
     return res.json({"success":"success"});
 })
 
-app.listen(8000, () => {
+app.listen(process.env.PORT || 8000, () => {
     mongoose.connect("mongodb://esatbey:esat3535@ds261521.mlab.com:61521/esat35", {useNewUrlParser:true});
 });
