@@ -35,7 +35,7 @@ app.post("/api/upload/image", async (req, res) => {
             await image.mv(image_src);
             
             let new_image = new ImageModel({
-                src:"/uploads/"+image.name,
+                src:"/uploads/" + image_url_code,
                 url_code:image_url_code
             })
             
