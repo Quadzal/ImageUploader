@@ -12,7 +12,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { far } from "@fortawesome/free-regular-svg-icons"
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Clipboard from 'v-clipboard'
- 
+import DeleteImageComponent from "./components/DeleteImage.vue";
 Vue.use(Clipboard)
 library.add(far)
 
@@ -35,7 +35,8 @@ const router = new VueRouter({
         document.title = to.params.image_code
         next()
      }
-    }
+    },
+    {path:"/delete/:image_code", component:DeleteImageComponent}
   ],
   mode:"history"
 })
