@@ -20,7 +20,7 @@
     "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.5",
+    "express-fileupload": "^1.1.9",
     "gzip": "^0.1.0",
     "horizon-youtube-mp3": "^1.9.2",
     "mongoose": "^5.6.8",
